@@ -1,7 +1,8 @@
 import React from 'react'
+import { FaStar } from 'react-icons/fa'
 
 const StarRating = () => {
-    return <div>Star</div>
+    return <div><FaStar /></div>
 }
 
 export default StarRating
