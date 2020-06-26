@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaStar } from 'react-icons/fa'
 
 const StarRating = () => {
+    const [rating, setRatings] = useState(null);
+
     return (
         <div>
             {[ ...Array(5)].map((star, i) => {
@@ -9,7 +11,11 @@ const StarRating = () => {
 
                 return (
                     <label>
-                        <input type="radio" name="rating" value={ratingValue} />
+                        <input 
+                            type="radio"
+                            name="rating"
+                            value={ratingValue}
+                            onClick={() => setRatings(ratingValue)} />
                         <FaStar className="star" size={100} />
                     </label>
                 );
